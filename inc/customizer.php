@@ -82,26 +82,6 @@ function crafter_customize_register( $wp_customize ) {
 	}
 
 
-	/*
-	Blog
-	------------------------------ */
-	$wp_customize->add_section( 'crafter_blog_layout_section', array(
-		'title' => esc_attr__( 'Blog Options', 'crafter' ),
-		'description' => esc_attr__( 'Choose a layout for your blog.', 'crafter' ),
-		'priority' => 150
-	) );
-
-	$wp_customize->add_setting( 'crafter_blog_layout', array( 'default' => '1', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-	$wp_customize->add_control( 'crafter_blog_layout', array(
-		'type' => 'radio',
-		'choices'    => array(
-            '1' => 'Square',
-            '2' => 'Full'
-        ),
-		'section' => 'crafter_blog_layout_section', // Required, core or custom.
-		'label' => esc_attr__( 'Layout', 'crafter' ),
-	) );
-
 
 	/*
     Sections

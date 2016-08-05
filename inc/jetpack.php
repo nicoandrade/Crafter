@@ -17,9 +17,6 @@ function crafter_jetpack_setup() {
 		'render'    => 'crafter_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
-
-	//Portfolio CPT
-	add_theme_support( 'jetpack-portfolio' );
 	
 	//Testimonials CPT
 	add_theme_support( 'jetpack-testimonial' );
