@@ -82,7 +82,7 @@
 	</header>
 	<div class="clearfix"></div>
     
-    <?php if ( ! is_front_page() ) : ?>
+    <?php if ( get_option( 'show_on_front' ) == 'posts' || !is_front_page() ) : ?>
     <div id="container" class="container">
         <div class="row">
     <?php endif; ?>

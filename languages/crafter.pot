@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Crafter\n"
-"POT-Creation-Date: 2016-08-05 16:05-0300\n"
-"PO-Revision-Date: 2016-08-05 16:05-0300\n"
+"POT-Creation-Date: 2017-01-04 15:24-0300\n"
+"PO-Revision-Date: 2017-01-04 15:24-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -83,13 +83,9 @@ msgstr ""
 msgid "&copy;"
 msgstr ""
 
-#: footer.php:26
-msgid "Designed by "
-msgstr ""
-
-#. Author of the plugin/theme
-#: footer.php:26
-msgid "Quema Labs"
+#: footer.php:27
+#, php-format
+msgid "Designed by %s."
 msgstr ""
 
 #: functions.php:69
@@ -104,335 +100,271 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: inc/customizer.php:47
+#: inc/customizer.php:28
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer.php:56
+#: inc/customizer.php:37
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:89
-msgid "Blog Options"
-msgstr ""
-
-#: inc/customizer.php:90
-msgid "Choose a layout for your blog."
-msgstr ""
-
-#: inc/customizer.php:102
-msgid "Layout"
-msgstr ""
-
-#: inc/customizer.php:110
+#: inc/customizer.php:78
 msgid "Front Page Sections"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:88
 msgid "Welcome"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:89
 msgid "Display a big image and welcome message."
 msgstr ""
 
-#: inc/customizer.php:126 template-parts/section-welcome.php:15
+#: inc/customizer.php:94
 msgid "Meet Crafter, your next WordPress Theme"
 msgstr ""
 
-#: inc/customizer.php:130
+#: inc/customizer.php:98
 msgid "Welcome Message"
 msgstr ""
 
-#: inc/customizer.php:133 template-parts/section-welcome.php:17
+#: inc/customizer.php:101
 msgid ""
 "The perfect theme for your bussiness or corporate site. Responsive and "
 "beautiful design will make your site stand out!."
 msgstr ""
 
-#: inc/customizer.php:137 inc/customizer.php:331 inc/widgets/service.php:180
+#: inc/customizer.php:105 inc/customizer.php:275
 msgid "Text"
 msgstr ""
 
-#: inc/customizer.php:141 inc/customizer.php:334 inc/customizer.php:381
-#: template-parts/section-bullet-points.php:85
+#: inc/customizer.php:109 inc/customizer.php:278 inc/customizer.php:325
+#: template-parts/section-bullet-points.php:42
 #: template-parts/section-video.php:34 template-parts/section-welcome.php:16
 msgid "Learn More"
 msgstr ""
 
-#: inc/customizer.php:145 inc/customizer.php:338 inc/customizer.php:385
-#: inc/widgets/service.php:201
+#: inc/customizer.php:113 inc/customizer.php:282 inc/customizer.php:329
 msgid "Link Title"
 msgstr ""
 
-#: inc/customizer.php:152 inc/customizer.php:345 inc/customizer.php:392
-#: inc/widgets/pricing.php:181
+#: inc/customizer.php:120 inc/customizer.php:289 inc/customizer.php:336
 msgid "Link URL"
 msgstr ""
 
-#: inc/customizer.php:157
+#: inc/customizer.php:125
 msgid "Welcome Image"
 msgstr ""
 
-#: inc/customizer.php:165 inc/customizer.php:195 inc/customizer.php:296
-#: inc/customizer.php:351 inc/customizer.php:479 inc/customizer.php:500
-#: inc/customizer.php:543 inc/customizer.php:575 inc/customizer.php:601
+#: inc/customizer.php:133 inc/customizer.php:172 inc/customizer.php:240
+#: inc/customizer.php:295 inc/customizer.php:364 inc/customizer.php:385
+#: inc/customizer.php:428 inc/customizer.php:469 inc/customizer.php:495
 msgid "Use this section?"
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:141
 msgid "Services"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:142
 msgid "Display services with icons."
 msgstr ""
 
-#: inc/customizer.php:179 template-parts/section-services.php:6
+#: inc/customizer.php:147 template-parts/section-services.php:6
 msgid "What We Do"
 msgstr ""
 
-#: inc/customizer.php:183 inc/customizer.php:323 inc/widgets/client.php:123
-#: inc/widgets/pricing.php:127 inc/widgets/service.php:170
+#: inc/customizer.php:151 inc/customizer.php:267 inc/widgets/client.php:123
 msgid "Title"
 msgstr ""
 
-#: inc/customizer.php:189
-msgid ""
-"To add services go to: <br><a href=\"#\" data-section=\"sidebar-widgets-"
-"services-section\">Customize -> Widgets -> Front Page - Service Section</a>. "
-"<br>Then add the \"<strong>Crafter - Service widget</strong>\""
+#: inc/customizer.php:159 inc/customizer.php:198 inc/customizer.php:351
+#: inc/customizer.php:456
+msgid "Select page"
 msgstr ""
 
-#: inc/customizer.php:203
+#: inc/customizer.php:160 inc/customizer.php:199 inc/customizer.php:352
+#: inc/customizer.php:457
+msgid "Where to extract the content"
+msgstr ""
+
+#: inc/customizer.php:166
+msgid ""
+"Here is explained on <a href=\"https://www.quemalabs.com/article/crafter-"
+"documentation/#how-services\" target=\"_blank\">How to create a services "
+"section</a>."
+msgstr ""
+
+#: inc/customizer.php:180
 msgid "About"
 msgstr ""
 
-#: inc/customizer.php:204
+#: inc/customizer.php:181
 msgid "Display images and descriptions."
 msgstr ""
 
-#: inc/customizer.php:209 template-parts/section-about.php:6
+#: inc/customizer.php:186 template-parts/section-about.php:6
 msgid "About Us"
 msgstr ""
 
-#: inc/customizer.php:213 inc/customizer.php:524 inc/customizer.php:563
-#: inc/customizer.php:595
+#: inc/customizer.php:190 inc/customizer.php:409 inc/customizer.php:448
+#: inc/customizer.php:489
 msgid "Section Title"
 msgstr ""
 
-#: inc/customizer.php:216 inc/customizer.php:402
-#: template-parts/section-about.php:42
-msgid "Successful Projects"
-msgstr ""
-
-#: inc/customizer.php:220 inc/customizer.php:406
-msgid "Title 1"
-msgstr ""
-
-#: inc/customizer.php:223 inc/customizer.php:239 inc/customizer.php:255
-#: template-parts/section-about.php:43 template-parts/section-about.php:47
-#: template-parts/section-about.php:51
+#: inc/customizer.php:205
 msgid ""
-"Maecenas sed diam eget risus varius blandit sit amet non magna. Donec "
-"ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a "
-"pharetra augue."
+"Here is explained on <a href=\"https://www.quemalabs.com/article/crafter-"
+"documentation/#how-about\" target=\"_blank\">How to create the about "
+"section</a>."
 msgstr ""
 
-#: inc/customizer.php:227
-msgid "Quote 1"
-msgstr ""
-
-#: inc/customizer.php:232 inc/customizer.php:421
-#: template-parts/section-about.php:46
-msgid "Hard Work"
-msgstr ""
-
-#: inc/customizer.php:236 inc/customizer.php:425
-msgid "Title 2"
-msgstr ""
-
-#: inc/customizer.php:243
-msgid "Quote 2"
-msgstr ""
-
-#: inc/customizer.php:248 inc/customizer.php:440 inc/customizer.php:458
-#: template-parts/section-about.php:50
-msgid "Creative Ideas"
-msgstr ""
-
-#: inc/customizer.php:252 inc/customizer.php:444
-msgid "Title 3"
-msgstr ""
-
-#: inc/customizer.php:259
-msgid "Quote 3"
-msgstr ""
-
-#: inc/customizer.php:267
+#: inc/customizer.php:211
 msgid "Image 1"
 msgstr ""
 
-#: inc/customizer.php:274
+#: inc/customizer.php:218
 msgid "Image 2"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/customizer.php:225
 msgid "Image 3"
 msgstr ""
 
-#: inc/customizer.php:288
+#: inc/customizer.php:232
 msgid "Image 4"
 msgstr ""
 
-#: inc/customizer.php:304
+#: inc/customizer.php:248
 msgid "Video"
 msgstr ""
 
-#: inc/customizer.php:305
+#: inc/customizer.php:249
 msgid "Display a video from YouTube or Vimeo and text aside."
 msgstr ""
 
-#: inc/customizer.php:314
+#: inc/customizer.php:258
 msgid "Video URL"
 msgstr ""
 
-#: inc/customizer.php:315
+#: inc/customizer.php:259
 msgid "Must be a YouTube or Vimeo URL"
 msgstr ""
 
-#: inc/customizer.php:319 template-parts/section-video.php:18
+#: inc/customizer.php:263
 msgid "Praesent commodo cursus magna, vel scelerisque nisl consectetur et"
 msgstr ""
 
-#: inc/customizer.php:327 inc/customizer.php:373
-#: template-parts/section-bullet-points.php:82
+#: inc/customizer.php:271 inc/customizer.php:317
 msgid ""
 "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis "
 "risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac "
 "facilisis in, egestas eget quam. Praesent commodo cursus magna."
 msgstr ""
 
-#: inc/customizer.php:360
+#: inc/customizer.php:304
 msgid "Bullet Points"
 msgstr ""
 
-#: inc/customizer.php:361
+#: inc/customizer.php:305
 msgid "Display bullet points and information."
 msgstr ""
 
-#: inc/customizer.php:366 template-parts/section-bullet-points.php:68
+#: inc/customizer.php:310
 msgid "Impactful Projects"
 msgstr ""
 
-#: inc/customizer.php:370
+#: inc/customizer.php:314
 msgid "Main Title"
 msgstr ""
 
-#: inc/customizer.php:377
+#: inc/customizer.php:321
 msgid "Main Description"
 msgstr ""
 
-#: inc/customizer.php:397 inc/customizer.php:535
+#: inc/customizer.php:341 inc/customizer.php:420
 msgid "Main Image"
 msgstr ""
 
-#: inc/customizer.php:409 inc/customizer.php:428 inc/customizer.php:447
-#: inc/customizer.php:465
+#: inc/customizer.php:358
 msgid ""
-"- Ornare Porta Vehicula\n"
-" - Tristique Commodo\n"
-" - Fermentum Cursus Sem\n"
-"- Sit Justo"
+"Here is explained on <a href=\"https://www.quemalabs.com/article/crafter-"
+"documentation/#how-bullet-points\" target=\"_blank\">How to create the "
+"bullet points section</a>."
 msgstr ""
 
-#: inc/customizer.php:416
-msgid "Description 1"
-msgstr ""
-
-#: inc/customizer.php:435
-msgid "Description 2"
-msgstr ""
-
-#: inc/customizer.php:454
-msgid "Description 3"
-msgstr ""
-
-#: inc/customizer.php:462
-msgid "Title 4"
-msgstr ""
-
-#: inc/customizer.php:472
-msgid "Description 4"
-msgstr ""
-
-#: inc/customizer.php:491 template-parts/section-testimonials.php:6
+#: inc/customizer.php:376 template-parts/section-testimonials.php:6
 msgid "Testimonials"
 msgstr ""
 
-#: inc/customizer.php:492
+#: inc/customizer.php:377
 #, php-format
 msgid ""
 "To create a testimonial go to your <a href=\"%s\">Admin Panel >> "
 "Testimonials >> Add New</a>."
 msgstr ""
 
-#: inc/customizer.php:514
+#: inc/customizer.php:399
 msgid "Clients"
 msgstr ""
 
-#: inc/customizer.php:515
+#: inc/customizer.php:400
 msgid "Display client's logos."
 msgstr ""
 
-#: inc/customizer.php:520 template-parts/section-clients.php:12
+#: inc/customizer.php:405 template-parts/section-clients.php:12
 msgid "People Who Trust Us"
 msgstr ""
 
-#: inc/customizer.php:530
+#: inc/customizer.php:415
 msgid ""
 "To add services go to: <br><a href=\"#\" data-section=\"sidebar-widgets-"
 "clients-section\">Customize -> Widgets -> Front Page - Clients Section</a>. "
 "<br>Then add the \"<strong>Crafter - Client widget</strong>\""
 msgstr ""
 
-#: inc/customizer.php:553 inc/customizer.php:559
+#: inc/customizer.php:438 inc/customizer.php:444
 #: template-parts/section-pricing.php:6
 msgid "Pricing"
 msgstr ""
 
-#: inc/customizer.php:554
+#: inc/customizer.php:439
 msgid "Display pricing lists."
 msgstr ""
 
-#: inc/customizer.php:569
+#: inc/customizer.php:463
 msgid ""
-"To add a list go to: <br><a href=\"#\" data-section=\"sidebar-widgets-"
-"pricing-section\">Customize -> Widgets -> Front Page - Pricing Section</a>. "
-"<br>Then add the \"<strong>Crafter - Pricing widget</strong>\""
+"Here is explained on <a href=\"https://www.quemalabs.com/article/crafter-"
+"documentation/#how-pricing\" target=\"_blank\">How to create the pricing "
+"section</a>."
 msgstr ""
 
-#: inc/customizer.php:585
+#: inc/customizer.php:479
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:586
+#: inc/customizer.php:480
 msgid "Display blog posts."
 msgstr ""
 
-#: inc/customizer.php:591
+#: inc/customizer.php:485
 msgid "From the blog"
 msgstr ""
 
-#: inc/customizer.php:652
-msgid "View PRO version"
+#: inc/customizer.php:504
+msgid "PRO version"
+msgstr ""
+
+#: inc/customizer.php:510
+#, php-format
+msgid "Check out the PRO version for more features. %s View PRO version %s"
 msgstr ""
 
 #: inc/extras.php:87
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:33
+#: inc/template-tags.php:33 template-parts/section-blog.php:45
 #, php-format
 msgctxt "post author"
 msgid "by %s"
@@ -442,11 +374,11 @@ msgstr ""
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:41
+#: inc/template-tags.php:41 template-parts/section-blog.php:51
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:41
+#: inc/template-tags.php:41 template-parts/section-blog.php:51
 msgid "% Comments"
 msgstr ""
 
@@ -921,125 +853,11 @@ msgstr ""
 
 #: inc/theme-functions/theme-info-page.php:67
 #, php-format
-msgid "You can find this documentation and more at our %sHelp Center%s."
-msgstr ""
-
-#: inc/theme-functions/theme-info-page.php:129
-msgid "Premium"
-msgstr ""
-
-#: inc/theme-functions/theme-info-page.php:131
-msgid "Free"
+msgid "You can find the documentation and more at our %sHelp Center%s."
 msgstr ""
 
 #: inc/theme-functions/wp_bootstrap_navwalker.php:197
 msgid "Add a menu"
-msgstr ""
-
-#: inc/updater/theme-updater-admin.php:144
-msgid ""
-"We recommend that you add your theme's license key here. By adding your key, "
-"you activate theme updates from your Admin Panel. With theme updates "
-"enabled, you'll get a notification in your dashboard whenever there is an "
-"update available. You can then update right in your WordPress dashboard, "
-"keeping your site healthy and secure."
-msgstr ""
-
-#: inc/updater/theme-updater-admin.php:145
-#, php-format
-msgid ""
-"You can find your theme's license key by signing in to your %sQuema Labs "
-"account%s and visiting the %sMy Purchases%s page. Click on %sView Details "
-"and Downloads%s and there you will find your %sLicense Key%s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:29
-msgid "Theme License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:30
-msgid "Enter your theme license key."
-msgstr ""
-
-#: inc/updater/theme-updater.php:31
-msgid "License Key"
-msgstr ""
-
-#: inc/updater/theme-updater.php:32
-msgid "License Action"
-msgstr ""
-
-#: inc/updater/theme-updater.php:33
-msgid "Deactivate License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:34
-msgid "Activate License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:35 inc/updater/theme-updater.php:47
-msgid "License status is unknown."
-msgstr ""
-
-#: inc/updater/theme-updater.php:36
-msgid "Renew?"
-msgstr ""
-
-#: inc/updater/theme-updater.php:37
-msgid "unlimited"
-msgstr ""
-
-#: inc/updater/theme-updater.php:38
-msgid "License key is active."
-msgstr ""
-
-#: inc/updater/theme-updater.php:39
-#, php-format
-msgid "Expires %s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:40
-#, php-format
-msgid "You have %1$s / %2$s sites activated."
-msgstr ""
-
-#: inc/updater/theme-updater.php:41
-#, php-format
-msgid "License key expired %s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:42
-msgid "License key has expired."
-msgstr ""
-
-#: inc/updater/theme-updater.php:43
-msgid "License keys do not match."
-msgstr ""
-
-#: inc/updater/theme-updater.php:44
-msgid "License is inactive."
-msgstr ""
-
-#: inc/updater/theme-updater.php:45
-msgid "License key is disabled."
-msgstr ""
-
-#: inc/updater/theme-updater.php:46
-msgid "Site is inactive."
-msgstr ""
-
-#: inc/updater/theme-updater.php:48
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
-msgstr ""
-
-#: inc/updater/theme-updater.php:49
-#, php-format
-msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
-"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
-"a>."
 msgstr ""
 
 #: inc/widget-areas/widget-areas.php:9
@@ -1047,33 +865,13 @@ msgid "Sidebar"
 msgstr ""
 
 #: inc/widget-areas/widget-areas.php:24
-msgid "Front Page - Services Section"
+msgid "Front Page - Clients Section"
 msgstr ""
 
 #: inc/widget-areas/widget-areas.php:26
 msgid ""
-"This is the Services Section in the Front Page. Here Add the \"Crafter - "
-"Service widget\""
-msgstr ""
-
-#: inc/widget-areas/widget-areas.php:33
-msgid "Front Page - Clients Section"
-msgstr ""
-
-#: inc/widget-areas/widget-areas.php:35
-msgid ""
 "This is the Clients Section in the Front Page. Here Add the \"Crafter - "
 "Client widget\""
-msgstr ""
-
-#: inc/widget-areas/widget-areas.php:42
-msgid "Front Page - Pricing Section"
-msgstr ""
-
-#: inc/widget-areas/widget-areas.php:44
-msgid ""
-"This is the Pricing Section in the Front Page. Here Add the \"Crafter - "
-"Pricing widget\""
 msgstr ""
 
 #: inc/widgets/client.php:22
@@ -1084,68 +882,12 @@ msgstr ""
 msgid "Display a Client's logo."
 msgstr ""
 
-#: inc/widgets/client.php:100 inc/widgets/service.php:140
+#: inc/widgets/client.php:100
 msgid "Image"
 msgstr ""
 
-#: inc/widgets/client.php:118 inc/widgets/service.php:162
+#: inc/widgets/client.php:118
 msgid "Upload Image"
-msgstr ""
-
-#: inc/widgets/pricing.php:11
-msgid "Crafter - Pricing widget"
-msgstr ""
-
-#: inc/widgets/pricing.php:13
-msgid "Display a pricing list."
-msgstr ""
-
-#: inc/widgets/pricing.php:137
-msgid "Currency"
-msgstr ""
-
-#: inc/widgets/pricing.php:137
-msgid "Example: $"
-msgstr ""
-
-#: inc/widgets/pricing.php:145
-msgid "Price"
-msgstr ""
-
-#: inc/widgets/pricing.php:152
-msgid "Duration"
-msgstr ""
-
-#: inc/widgets/pricing.php:152
-msgid "Example: mo"
-msgstr ""
-
-#: inc/widgets/pricing.php:161
-msgid "Features List"
-msgstr ""
-
-#: inc/widgets/pricing.php:175
-msgid "Link title"
-msgstr ""
-
-#: inc/widgets/pricing.php:193
-msgid "Featured?"
-msgstr ""
-
-#: inc/widgets/service.php:22
-msgid "Crafter - Service widget"
-msgstr ""
-
-#: inc/widgets/service.php:24
-msgid "Display a Service or Feature description."
-msgstr ""
-
-#: inc/widgets/service.php:191
-msgid "Category"
-msgstr ""
-
-#: inc/widgets/service.php:208
-msgid "Link"
 msgstr ""
 
 #: search.php:17
@@ -1180,117 +922,44 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/pagination.php:11
+#: template-parts/pagination.php:4
 msgid "Previous page"
 msgstr ""
 
-#: template-parts/pagination.php:12
+#: template-parts/pagination.php:5
 msgid "Next page"
+msgstr ""
+
+#: template-parts/section-about.php:55
+msgid "Successful Projects"
+msgstr ""
+
+#: template-parts/section-about.php:56 template-parts/section-about.php:60
+#: template-parts/section-about.php:64
+msgid ""
+"Maecenas sed diam eget risus varius blandit sit amet non magna. Donec "
+"ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a "
+"pharetra augue."
+msgstr ""
+
+#: template-parts/section-about.php:59
+msgid "Hard Work"
+msgstr ""
+
+#: template-parts/section-about.php:63
+msgid "Creative Ideas"
 msgstr ""
 
 #: template-parts/section-blog.php:14
 msgid "From The Blog"
 msgstr ""
 
-#: template-parts/section-bullet-points.php:12
-msgid "Team Work"
+#: template-parts/section-blog.php:50
+msgid "with "
 msgstr ""
 
-#: template-parts/section-bullet-points.php:13
-#: template-parts/section-bullet-points.php:26
-#: template-parts/section-bullet-points.php:39
-#: template-parts/section-bullet-points.php:52
-msgid ""
-"- Ornare Porta Vehicula\n"
-"                            - Tristique Commodo\n"
-"                            - Fermentum Cursus Sem\n"
-"                            - Sit Justo"
-msgstr ""
-
-#: template-parts/section-bullet-points.php:25
-msgid "Strategy"
-msgstr ""
-
-#: template-parts/section-bullet-points.php:38
-msgid "Lidership"
-msgstr ""
-
-#: template-parts/section-bullet-points.php:51
-msgid "Marketing"
-msgstr ""
-
-#: template-parts/section-pricing.php:17
-msgid "Basic"
-msgstr ""
-
-#: template-parts/section-pricing.php:18 template-parts/section-pricing.php:30
-#: template-parts/section-pricing.php:42
-msgid "$"
-msgstr ""
-
-#: template-parts/section-pricing.php:19
-msgid "15"
-msgstr ""
-
-#: template-parts/section-pricing.php:20 template-parts/section-pricing.php:32
-#: template-parts/section-pricing.php:44
-msgctxt "Month abbreviation"
-msgid "mo"
-msgstr ""
-
-#: template-parts/section-pricing.php:21
-#, php-format
-msgid ""
-"<em>256MB</em> Memory%s<em>1</em> User%s<em>1</em> Website%s<em>1</em> Domain"
-"%s<em>Unlimited</em> Bandwidth%s<em>24/7</em> Support"
-msgstr ""
-
-#: template-parts/section-pricing.php:29
-msgid "Popular"
-msgstr ""
-
-#: template-parts/section-pricing.php:31
-msgid "25"
-msgstr ""
-
-#: template-parts/section-pricing.php:33
-#, php-format
-msgid ""
-"<em>512MB</em> Memory%s<em>3</em> User%s<em>5</em> Website%s<em>7</em> Domain"
-"%s<em>Unlimited</em> Bandwidth%s<em>24/7</em> Support"
-msgstr ""
-
-#: template-parts/section-pricing.php:41
-msgid "Premier"
-msgstr ""
-
-#: template-parts/section-pricing.php:43
-msgid "35"
-msgstr ""
-
-#: template-parts/section-pricing.php:45
-#, php-format
-msgid ""
-"<em>1024MB</em> Memory%s<em>5</em> User%s<em>10</em> Website%s<em>10</em> "
-"Domain%s<em>Unlimited</em> Bandwidth%s<em>24/7</em> Support"
-msgstr ""
-
-#: template-parts/section-testimonials.php:31
-msgid ""
-"\"We are an agency passionate about what we do, providing a great service to "
-"small businesses. Fusce dapibus, tellus ac cursus commodo, tortor mauris "
-"condimentum nibh, ut fermentum massa justo sit amet risus.\""
-msgstr ""
-
-#: template-parts/section-testimonials.php:36
-msgid "John Smith <span>CEO, Crafter Inc.</span>"
-msgstr ""
-
-#: template-parts/section-video.php:31
-msgid ""
-"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis "
-"risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at "
-"lobortis."
+#: template-parts/section-blog.php:51
+msgid "No comments"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -1303,9 +972,13 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Crafter is a great bussiness and corporate theme. Works on all devecies from "
+"Crafter is a great business and corporate theme. Works on all devices from "
 "computer to mobile with its responsive design. Optimized for SEO, easy to "
 "customize and translation ready."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Quema Labs"
 msgstr ""
 
 #. Author URI of the plugin/theme

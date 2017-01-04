@@ -12,9 +12,9 @@ if ( empty( $welcome_image ) ) {
 <div id="welcome-section" class="welcome-section" <?php if( false == $crafter_enable_section ): echo 'style="display: none;"'; else: echo 'style="background-image: url(' . esc_url( $welcome_image ) . ')"'; endif ?>>
     
     <div class="welcome-intro">
-        <h2 class="intro-line"><?php echo esc_html( get_theme_mod( 'crafter_welcome_title', esc_html__( 'Meet Crafter, your next WordPress Theme', 'crafter' ) ) ); ?></h2>
+        <h2 class="intro-line"><?php echo esc_html( get_theme_mod( 'crafter_welcome_title', get_bloginfo( 'name' ) ) ); ?></h2>
         <?php $crafter_welcome_link_title = get_theme_mod( 'crafter_welcome_link_title', esc_html__( 'Learn More', 'crafter' ) ); ?>
-        <p class="intro-text"><?php echo esc_html( get_theme_mod( 'crafter_welcome_text', esc_html__( 'The perfect theme for your bussiness or corporate site. Responsive and beautiful design will make your site stand out!.', 'crafter' ) ) ); ?></p>
+        <p class="intro-text"><?php echo esc_html( get_theme_mod( 'crafter_welcome_text', get_bloginfo( 'description' ) ) ); ?></p>
         <?php if ( ! empty( $crafter_welcome_link_title ) || is_customize_preview() ) { ?>
         <a href="<?php echo esc_url( get_theme_mod( 'crafter_welcome_link_url', '#' ) ); ?>" class="btn-ql"><?php echo esc_html( $crafter_welcome_link_title ); ?></a>
         <?php } ?>

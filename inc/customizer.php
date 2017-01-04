@@ -12,25 +12,6 @@
  */
 function crafter_customize_register( $wp_customize ) {
 
-	/**
-	 * Control for the PRO buttons
-	 */
-	class crafter_Pro_Version extends WP_Customize_Control{
-		public function render_content()
-		{
-			$args = array(
-				'a' => array(
-					'href' => array(),
-					'title' => array()
-					),
-				'br' => array(),
-				'em' => array(),
-				'strong' => array(),
-				);
-			echo wp_kses( $this->label, $args );
-		}
-	}
-
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -79,6 +60,13 @@ function crafter_customize_register( $wp_customize ) {
 	    $sections_sorted['crafter_testimonials_section'] = 80;
 	    $sections_sorted['crafter_blog_section'] = 90;
 
+	}
+
+	//Create var with pages
+	$pages = get_pages();
+	$pages_toshow;
+	foreach ( $pages as $page ) {
+		$pages_toshow[$page->ID] = $page->post_title;
 	}
 
 
@@ -163,10 +151,19 @@ function crafter_customize_register( $wp_customize ) {
 			'label' => esc_attr__( 'Title', 'crafter' ),
 		) );
 
+		$wp_customize->add_setting( 'crafter_services_page', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
+		$wp_customize->add_control( 'crafter_services_page', array(
+			'type' => 'select',
+			'choices' => $pages_toshow,
+			'section' => 'crafter_services_section', // Required, core or custom.
+			'label' => esc_attr__( 'Select page', 'crafter' ),
+			'description' => esc_attr__( 'Where to extract the content', 'crafter' ),
+		) );
+
 		$wp_customize->add_setting( 'crafter_services_text', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
 		$wp_customize->add_control( new crafter_Display_Text_Control( $wp_customize, 'crafter_services_text', array(
 			'section' => 'crafter_services_section', // Required, core or custom.
-			'label' => __( 'To add services go to: <br><a href="#" data-section="sidebar-widgets-services-section">Customize -> Widgets -> Front Page - Service Section</a>. <br>Then add the "<strong>Crafter - Service widget</strong>"', 'crafter' ),
+			'label' => __( 'Here is explained on <a href="https://www.quemalabs.com/article/crafter-documentation/#how-services" target="_blank">How to create a services section</a>.', 'crafter' ),
 		) ) );
 
 		$wp_customize->add_setting( 'crafter_services_enable', array( 'default' => true, 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_bool', ) );
@@ -193,54 +190,21 @@ function crafter_customize_register( $wp_customize ) {
 			'label' => esc_attr__( 'Section Title', 'crafter' ),
 		) );
 
-		$wp_customize->add_setting( 'crafter_about_title1', array( 'default' => esc_attr__( 'Successful Projects', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_about_title1', array(
-			'type' => 'text',
+		$wp_customize->add_setting( 'crafter_about_page', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
+		$wp_customize->add_control( 'crafter_about_page', array(
+			'type' => 'select',
+			'choices' => $pages_toshow,
 			'section' => 'crafter_about_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 1', 'crafter' ),
+			'label' => esc_attr__( 'Select page', 'crafter' ),
+			'description' => esc_attr__( 'Where to extract the content', 'crafter' ),
 		) );
 
-		$wp_customize->add_setting( 'crafter_about_text1', array( 'default' => esc_html__( 'Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_about_text1', array(
-			'type' => 'textarea',
+		$wp_customize->add_setting( 'crafter_about_text', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
+		$wp_customize->add_control( new crafter_Display_Text_Control( $wp_customize, 'crafter_about_text', array(
 			'section' => 'crafter_about_section', // Required, core or custom.
-			'label' => esc_attr__( 'Quote 1', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
+			'label' => __( 'Here is explained on <a href="https://www.quemalabs.com/article/crafter-documentation/#how-about" target="_blank">How to create the about section</a>.', 'crafter' ),
+		) ) );
 
-
-		$wp_customize->add_setting( 'crafter_about_title2', array( 'default' => esc_attr__( 'Hard Work', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_about_title2', array(
-			'type' => 'text',
-			'section' => 'crafter_about_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 2', 'crafter' ),
-		) );
-
-		$wp_customize->add_setting( 'crafter_about_text2', array( 'default' => esc_html__( 'Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_about_text2', array(
-			'type' => 'textarea',
-			'section' => 'crafter_about_section', // Required, core or custom.
-			'label' => esc_attr__( 'Quote 2', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
-
-
-		$wp_customize->add_setting( 'crafter_about_title3', array( 'default' => esc_attr__( 'Creative Ideas', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_about_title3', array(
-			'type' => 'text',
-			'section' => 'crafter_about_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 3', 'crafter' ),
-		) );
-
-		$wp_customize->add_setting( 'crafter_about_text3', array( 'default' => esc_html__( 'Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_about_text3', array(
-			'type' => 'textarea',
-			'section' => 'crafter_about_section', // Required, core or custom.
-			'label' => esc_attr__( 'Quote 3', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
-
-		
 
 		$wp_customize->add_setting( 'crafter_about_image1', array( 'default' => '', 'transport' => 'postMessage', 'sanitize_callback' => 'attachment_url_to_postid', ) );
 	    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'crafter_about_image1', array(
@@ -379,79 +343,20 @@ function crafter_customize_register( $wp_customize ) {
 	        'settings' => 'crafter_bullet_points_image',
 		) ) );
 
-		$wp_customize->add_setting( 'crafter_bullet_points_title1', array( 'default' => esc_attr__( 'Successful Projects', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_title1', array(
-			'type' => 'text',
+		$wp_customize->add_setting( 'crafter_bullet_points_page', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
+		$wp_customize->add_control( 'crafter_bullet_points_page', array(
+			'type' => 'select',
+			'choices' => $pages_toshow,
 			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 1', 'crafter' ),
+			'label' => esc_attr__( 'Select page', 'crafter' ),
+			'description' => esc_attr__( 'Where to extract the content', 'crafter' ),
 		) );
 
-		$wp_customize->add_setting( 'crafter_bullet_points_text1', array( 'default' => esc_html__( '- Ornare Porta Vehicula
- - Tristique Commodo
- - Fermentum Cursus Sem
-- Sit Justo', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_text1', array(
-			'type' => 'textarea',
+		$wp_customize->add_setting( 'crafter_bullet_points_text', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
+		$wp_customize->add_control( new crafter_Display_Text_Control( $wp_customize, 'crafter_bullet_points_text', array(
 			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Description 1', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
-
-
-		$wp_customize->add_setting( 'crafter_bullet_points_title2', array( 'default' => esc_attr__( 'Hard Work', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_title2', array(
-			'type' => 'text',
-			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 2', 'crafter' ),
-		) );
-
-		$wp_customize->add_setting( 'crafter_bullet_points_text2', array( 'default' => esc_html__( '- Ornare Porta Vehicula
- - Tristique Commodo
- - Fermentum Cursus Sem
-- Sit Justo', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_text2', array(
-			'type' => 'textarea',
-			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Description 2', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
-
-
-		$wp_customize->add_setting( 'crafter_bullet_points_title3', array( 'default' => esc_attr__( 'Creative Ideas', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_title3', array(
-			'type' => 'text',
-			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 3', 'crafter' ),
-		) );
-
-		$wp_customize->add_setting( 'crafter_bullet_points_text3', array( 'default' => esc_html__( '- Ornare Porta Vehicula
- - Tristique Commodo
- - Fermentum Cursus Sem
-- Sit Justo', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_text3', array(
-			'type' => 'textarea',
-			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Description 3', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
-
-		$wp_customize->add_setting( 'crafter_bullet_points_title4', array( 'default' => esc_attr__( 'Creative Ideas', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_text', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_title4', array(
-			'type' => 'text',
-			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Title 4', 'crafter' ),
-		) );
-
-		$wp_customize->add_setting( 'crafter_bullet_points_text4', array( 'default' => esc_html__( '- Ornare Porta Vehicula
- - Tristique Commodo
- - Fermentum Cursus Sem
-- Sit Justo', 'crafter' ), 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_textarea', ) );
-		$wp_customize->add_control( 'crafter_bullet_points_text4', array(
-			'type' => 'textarea',
-			'section' => 'crafter_bullet_points_section', // Required, core or custom.
-			'label' => esc_attr__( 'Description 4', 'crafter' ),
-			//'description' => esc_attr__( '', 'crafter' ),
-		) );
+			'label' => __( 'Here is explained on <a href="https://www.quemalabs.com/article/crafter-documentation/#how-bullet-points" target="_blank">How to create the bullet points section</a>.', 'crafter' ),
+		) ) );
 
 		$wp_customize->add_setting( 'crafter_bullet_points_enable', array( 'default' => true, 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_bool', ) );
 		    $wp_customize->add_control( 'crafter_bullet_points_enable', array(
@@ -543,10 +448,19 @@ function crafter_customize_register( $wp_customize ) {
 			'label' => esc_attr__( "Section Title", 'crafter' ),
 		) );
 
+		$wp_customize->add_setting( 'crafter_pricing_page', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
+		$wp_customize->add_control( 'crafter_pricing_page', array(
+			'type' => 'select',
+			'choices' => $pages_toshow,
+			'section' => 'crafter_pricing_section', // Required, core or custom.
+			'label' => esc_attr__( 'Select page', 'crafter' ),
+			'description' => esc_attr__( 'Where to extract the content', 'crafter' ),
+		) );
+
 		$wp_customize->add_setting( 'crafter_pricing_text', array( 'default' => '', 'sanitize_callback' => 'crafter_sanitize_text', ) );
 		$wp_customize->add_control( new crafter_Display_Text_Control( $wp_customize, 'crafter_pricing_text', array(
 			'section' => 'crafter_pricing_section', // Required, core or custom.
-			'label' => __( 'To add a list go to: <br><a href="#" data-section="sidebar-widgets-pricing-section">Customize -> Widgets -> Front Page - Pricing Section</a>. <br>Then add the "<strong>Crafter - Pricing widget</strong>"', 'crafter' ),
+			'label' => __( 'Here is explained on <a href="https://www.quemalabs.com/article/crafter-documentation/#how-pricing" target="_blank">How to create the pricing section</a>.', 'crafter' ),
 		) ) );
 
 		$wp_customize->add_setting( 'crafter_pricing_enable', array( 'default' => true, 'transport' => 'postMessage', 'sanitize_callback' => 'crafter_sanitize_bool', ) );
@@ -581,6 +495,20 @@ function crafter_customize_register( $wp_customize ) {
 			'label' => esc_attr__( "Use this section?", 'crafter' ),
 			'type'    => 'checkbox',
 		) );
+
+
+		/*
+		PRO Version
+		------------------------------ */
+		$wp_customize->add_section( 'crafter_pro_section', array(
+			'title' => esc_attr__( 'PRO version', 'crafter' ),
+			'priority' => 160,
+		) );
+		$wp_customize->add_setting( 'crafter_probtn', array( 'default' => '', 'sanitize_callback' => 'coni_sanitize_text', ) );
+		$wp_customize->add_control( new crafter_Display_Text_Control( $wp_customize, 'crafter_probtn', array(
+			'section' => 'crafter_pro_section', // Required, core or custom.
+			'label' => sprintf( __( 'Check out the PRO version for more features. %s View PRO version %s', 'crafter' ), '<a target="_blank" class="button" href="https://www.quemalabs.com/theme/crafter-pro/" style="width: 80%; margin: 10px auto; display: block; text-align: center;">', '</a>' ),
+		) ) );
 
 
 		
@@ -627,11 +555,6 @@ add_action( 'customize_preview_init', 'crafter_customize_preview_js' );
  */
 function crafter_customize_js() {
 
-	wp_enqueue_script( 'crafter_customizer_top_buttons', get_template_directory_uri() . '/js/theme-customizer-top-buttons.js', array( 'jquery' ), true  );
-	wp_localize_script( 'crafter_customizer_top_buttons', 'topbtns', array(
-			'pro' => esc_html__( 'View PRO version', 'crafter' )
-	) );
-
 	wp_enqueue_script( 'jquery' );
 	
 	wp_register_script( 'crafter_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-controls', 'jquery' ), '20151024', true );
@@ -670,20 +593,6 @@ function crafter_sanitize_integer( $value ) {
 }
 
 /**
- * Sanitize return pro version text
- */
-function crafter_pro_version( $input ) {
-    return $input;
-}
-
-/**
- * Sanitize Any
- */
-function crafter_sanitize_any( $input ) {
-    return $input;
-}
-
-/**
  * Sanitize Text
  */
 function crafter_sanitize_text( $str ) {
@@ -694,14 +603,14 @@ function crafter_sanitize_text( $str ) {
  * Sanitize Textarea
  */
 function crafter_sanitize_textarea( $text ) {
-	return esc_textarea( $text );
+	return wp_filter_post_kses( $text );
 }
 
 /**
  * Sanitize URL
  */
 function crafter_sanitize_url( $url ) {
-	return esc_url( $url );
+	return esc_url_raw( $url );
 }
 
 /**
@@ -742,43 +651,6 @@ function crafter_sanitize_lat_long( $coords ) {
 
 
 
-/**
- * Create the "PRO version" buttons
- */
-if ( ! function_exists( 'crafter_pro_btns' ) ){
-	function crafter_pro_btns( $args ){
-
-		$wp_customize = $args['wp_customize'];
-		$title = $args['title'];
-		$label = $args['label'];
-		if ( isset( $args['priority'] ) || array_key_exists( 'priority', $args ) ) {
-			$priority = $args['priority'];
-		}else{
-			$priority = 120;
-		}
-		if ( isset( $args['panel'] ) || array_key_exists( 'panel', $args ) ) {
-			$panel = $args['panel'];
-		}else{
-			$panel = '';
-		}
-
-		$section_id = sanitize_title( $title );
-
-		$wp_customize->add_section( $section_id , array(
-			'title'       => $title,
-			'priority'    => $priority,
-			'panel' => $panel,
-		) );
-		$wp_customize->add_setting( $section_id, array(
-			'sanitize_callback' => 'crafter_pro_version'
-		) );
-		$wp_customize->add_control( new crafter_Pro_Version( $wp_customize, $section_id, array(
-	        'section' => $section_id,
-	        'label' => $label
-		   )
-		) );
-	}
-}//end if function_exists
 
 /**
  * Display Text Control
@@ -826,19 +698,3 @@ function crafter_get_image_src() {
 	die();
 }
 
-/*
-* AJAX call to save the order for Front Page Sections
-*/
-add_action( 'wp_ajax_nopriv_crafter_save_sortable', 'crafter_save_sortable' );
-add_action( 'wp_ajax_crafter_save_sortable', 'crafter_save_sortable' );
-
-function crafter_save_sortable() {
-	$items = $_POST['items'];
-	if ( is_array( $items ) ) {
-		update_option( 'crafter_sortable_items', $items );
-		wp_send_json_success();
-	}else{
-		wp_send_json_error();
-	}
-	die();
-}

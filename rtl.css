@@ -34,10 +34,11 @@ LESS Variables and Mixins
 1. Header
 ========================================== 
 */
-
-.home #header {
-	right: 50%;
-	left: auto;
+.logo_container{
+	left: 58.3333%;
+}
+#header .col-md-7{
+	right: 41.6667%;
 }
 
 .logo_container .logo_desc_wrap {
@@ -247,10 +248,6 @@ Welcome Section
 	left: 0;
 }
 
-.welcome-intro {
-	right: 50%;
-	left: auto;
-}
 
 /*
 Services Section
@@ -363,11 +360,6 @@ Bullet Points Section
 	margin-right: auto;
 }
 
-.bullet-point .bullet-point-number::before {
-	right: 50%;
-	left: auto;
-}
-
 .bullet-point .bullet-point-number::after {
 	left: 0;
 	right: auto;
@@ -451,11 +443,6 @@ Blog Section
 .blog-wrap .blog-item .blog-item-link {
 	left: 0;
 	right: 0;
-}
-
-.blog-wrap .blog-time-date::before {
-	right: 50%;
-	left: auto;
 }
 
 .blog-wrap .blog-time-date::after {
@@ -745,6 +732,13 @@ Subfooter
 
 .sub-footer p {
 	float: right;
+}
+
+.sub-footer .col-md-5{
+	left: 58.3333%;
+}
+.sub-footer .col-md-7{
+	right: 41.6667%;
 }
 
 /*
@@ -1079,15 +1073,6 @@ a img.aligncenter {
 /* Section Title
 -------------------------------------------------- */
 
-.section-title::after {
-	right: 50%;
-	left: auto;
-}
-
-.section-title::before {
-	right: 50%;
-	left: auto;
-}
 
 .section-title.alt {
 	text-align: right;
@@ -1276,10 +1261,6 @@ Hide the icon
 	margin-right: auto;
 }
 
-.about-section .about-text {
-	margin-right: 0;
-	margin-left: auto;
-}
 
 /*
 	Quote Section

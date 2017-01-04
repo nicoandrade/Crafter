@@ -11,6 +11,8 @@ if ( $crafter_enable_section || is_customize_preview() ) :
     $about_image1 = $about_image_full1[0];
     if ( empty( $about_image1 ) ) {
         $about_image1 = get_template_directory_uri() . '/images/aboutus.jpg';
+        $about_image_full1[1] = '1500px';
+        $about_image_full1[2] = '1000px';
     }
     $about_image_full2 = wp_get_attachment_image_src( absint( get_theme_mod( 'crafter_about_image2' ) ), 'full' );
     $about_image2 = $about_image_full2[0];
@@ -38,6 +40,17 @@ if ( $crafter_enable_section || is_customize_preview() ) :
     </div><!-- about-gallery -->
 
     <div class="about-text wow fadeInRight">
+        <?php
+        $id = get_theme_mod( 'crafter_about_page', '' );
+        $post = get_post( $id ); 
+
+        if ( is_a( $post, 'WP_Post' ) ) {
+
+            $content = apply_filters( 'the_content', $post->post_content ); 
+            echo $content;
+            
+        }else{
+        ?>
         <div class="about-service about-service1">
             <h4><?php echo esc_html( get_theme_mod( 'crafter_about_title1', esc_html__( 'Successful Projects', 'crafter' ) ) ); ?></h4>
             <p><?php echo esc_html( get_theme_mod( 'crafter_about_text1', esc_html__( 'Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.', 'crafter' ) ) ); ?></p>
@@ -50,6 +63,9 @@ if ( $crafter_enable_section || is_customize_preview() ) :
             <h4><?php echo esc_html( get_theme_mod( 'crafter_about_title3', esc_html__( 'Creative Ideas', 'crafter' ) ) ); ?></h4>
             <p><?php echo esc_html( get_theme_mod( 'crafter_about_text3', esc_html__( 'Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.', 'crafter' ) ) ); ?></p>
         </div>
+        <?php 
+        }
+        ?>
     </div><!-- about-gallery -->
     
 </div><!-- about-section -->

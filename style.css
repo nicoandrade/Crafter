@@ -4,8 +4,8 @@ Theme Name: Crafter
 Theme URI: https://www.quemalabs.com/theme/crafter/
 Author: Quema Labs
 Author URI: https://www.quemalabs.com
-Description: Crafter is a great bussiness and corporate theme. Works on all devecies from computer to mobile with its responsive design. Optimized for SEO, easy to customize and translation ready.
-Version: 1.0.1
+Description: Crafter is a great business and corporate theme. Works on all devices from computer to mobile with its responsive design. Optimized for SEO, easy to customize and translation ready.
+Version: 1.0.10
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: crafter
@@ -44,7 +44,7 @@ LESS Variables and Mixins
   padding: 1.5625rem 0;
   width: 100%;
 }
-.home #header {
+.home:not(.blog) #header {
   margin-bottom: 0;
   position: absolute;
   -webkit-transform: translate(-50%, 0);
@@ -101,7 +101,7 @@ LESS Variables and Mixins
   transition: all 400ms ease-in-out;
   text-transform: uppercase;
 }
-.home .logo_container .ql_logo {
+.home:not(.blog) .logo_container .ql_logo {
   color: #fff;
 }
 .logo_container .ql_logo:hover {
@@ -181,7 +181,7 @@ Nav Menu
   padding: 0.78571428571429em 1.07142857142857em;
   outline: 0;
 }
-.home #jqueryslidemenu ul.nav > li > a {
+.home:not(.blog) #jqueryslidemenu ul.nav > li > a {
   color: #eeeeee;
 }
 #jqueryslidemenu ul.nav > li > a:hover,
@@ -807,7 +807,7 @@ Search
 2. Home
 ========================================== 
 */
-body.home {
+body.home:not(.blog) {
   position: relative;
 }
 /*

@@ -40,7 +40,18 @@ if ( $crafter_enable_section || is_customize_preview() ) :
                     </div>
                     <div class="entry-half2">
                         <?php the_title( sprintf( '<h2 class="blog-item-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        <p>by <a href="#">Nico Andrade</a> with <a href="#">3 Comments</a></p>
+                        <?php
+                        $byline = sprintf(
+                        esc_html_x( 'by %s', 'post author', 'crafter' ),
+                        '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>' );
+                        
+                        echo '<p>' . $byline . ' ';
+                        if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+                            esc_html_e( 'with ', 'crafter' );
+                            comments_popup_link( esc_html__( 'No comments', 'crafter' ), esc_html__( '1 Comment', 'crafter' ), esc_html__( '% Comments', 'crafter' ) );
+                        }
+                        echo '</p>';
+                        ?>
                     </div>
                 </div>
 

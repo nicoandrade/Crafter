@@ -71,9 +71,9 @@ class crafter_Client extends WP_Widget{
 
         $instance = $old_instance;
 
-        $instance['title'] = strip_tags( $new_instance['title'] );
+        $instance['title'] = wp_strip_all_tags( $new_instance['title'] );
 
-        $instance['image_uri'] = strip_tags( $new_instance['image_uri'] );
+        $instance['image_uri'] = wp_strip_all_tags( $new_instance['image_uri'] );
 
         return $instance;
 

@@ -15,23 +15,6 @@
  * @package Crafter
  */
 
-/**
- * Set up the WordPress core custom header feature.
- *
- * @uses crafter_header_style()
- */
-function crafter_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'crafter_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '383838',
-		'width'                  => 1905,
-		'height'                 => 42,
-		'flex-height'            => true,
-		'flex-width'            => true,
-		'wp-head-callback'       => 'crafter_header_style',
-	) ) );
-}
-add_action( 'after_setup_theme', 'crafter_custom_header_setup' );
 
 if ( ! function_exists( 'crafter_header_style' ) ) :
 /**

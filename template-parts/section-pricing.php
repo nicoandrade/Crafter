@@ -8,46 +8,78 @@ if ( $crafter_enable_section || is_customize_preview() ) :
     <div class="pricing-table-wrap">
 
             <?php
-            if ( is_active_sidebar( 'pricing-section' ) ){
+            $id = get_theme_mod( 'crafter_pricing_page', '' );
+            $post = get_post( $id ); 
 
-                dynamic_sidebar( 'pricing-section' );
+            if ( is_a( $post, 'WP_Post' ) ) {
 
+                $content = apply_filters( 'the_content', $post->post_content ); 
+                echo $content;
+                
             }else{
-                $widget_instance = array(
-                    'title' => esc_html__( 'Basic', 'crafter' ),
-                    'currency' => esc_html__( '$', 'crafter' ), 
-                    'price' => esc_html__( '15', 'crafter' ),
-                    'duration' => esc_html_x( 'mo', 'Month abbreviation', 'crafter' ),
-                    'features' => sprintf( __( '<em>256MB</em> Memory%s<em>1</em> User%s<em>1</em> Website%s<em>1</em> Domain%s<em>Unlimited</em> Bandwidth%s<em>24/7</em> Support', 'crafter' ), PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL ),
-                    'link_title' => 'Select',
-                    'link' => '#',
-                    'featured' => 'false'
-                    );
-                the_widget( 'crafter_Pricing', $widget_instance, array( 'before_widget' => '', 'after_widget' => '' ) );
+            ?>
+                <div class="pricing-table wow fadeInUp">
+                    <h3>Basic</h3>
 
-                $widget_instance = array(
-                    'title' => esc_html__( 'Popular', 'crafter' ),
-                    'currency' => esc_html__( '$', 'crafter' ), 
-                    'price' => esc_html__( '25', 'crafter' ),
-                    'duration' => esc_html_x( 'mo', 'Month abbreviation', 'crafter' ),
-                    'features' => sprintf( __( '<em>512MB</em> Memory%s<em>3</em> User%s<em>5</em> Website%s<em>7</em> Domain%s<em>Unlimited</em> Bandwidth%s<em>24/7</em> Support', 'crafter' ), PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL ),
-                    'link_title' => 'Select',
-                    'link' => '#',
-                    'featured' => 'true'
-                    );
-                the_widget( 'crafter_Pricing', $widget_instance, array( 'before_widget' => '', 'after_widget' => '' ) );
+                    <span class="pricing-price">
+                        <span class="cd-currency">$</span><span class="cd-value">12</span><span class="cd-duration">mo</span>
+                    </span>
 
-                $widget_instance = array(
-                    'title' => esc_html__( 'Premier', 'crafter' ),
-                    'currency' => esc_html__( '$', 'crafter' ), 
-                    'price' => esc_html__( '35', 'crafter' ),
-                    'duration' => esc_html_x( 'mo', 'Month abbreviation', 'crafter' ),
-                    'features' => sprintf( __( '<em>1024MB</em> Memory%s<em>5</em> User%s<em>10</em> Website%s<em>10</em> Domain%s<em>Unlimited</em> Bandwidth%s<em>24/7</em> Support', 'crafter' ), PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL ),
-                    'link_title' => 'Select',
-                    'link' => '#',
-                    'featured' => 'false'
-                    );
-                the_widget( 'crafter_Pricing', $widget_instance, array( 'before_widget' => '', 'after_widget' => '' ) );
+                    <ul>
+                        <li><em>256MB</em> Memory</li>
+                        <li><em>1</em> User</li>
+                        <li><em>1</em> Website</li>
+                        <li><em>1</em> Domain</li>
+                        <li><em>Unlimited</em> Bandwidth</li>
+                        <li><em>24/7</em> Support</li>
+                    </ul>
+
+                    <a class="btn-ql" href="#">Select</a>
+                    <span class="lines"></span>
+                </div>
+
+                <div class="pricing-table wow fadeInUp">
+
+                    <h3>Popular</h3>
+
+                    <span class="pricing-price">
+                        <span class="cd-currency">$</span><span class="cd-value">25</span><span class="cd-duration">mo</span>
+                    </span>
+
+                    <ul>
+                        <li><em>512MB</em> Memory</li>
+                        <li><em>3</em> User</li>
+                        <li><em>5</em> Website</li>
+                        <li><em>7</em> Domain</li>
+                        <li><em>Unlimited</em> Bandwidth</li>
+                        <li><em>24/7</em> Support</li>
+                    </ul>
+
+                    <a class="btn-ql" href="#">Select</a>
+                    <span class="lines"></span>
+                </div>
+
+                <div class="pricing-table wow fadeInUp">
+
+                    <h3>Premier</h3>
+
+                    <span class="pricing-price">
+                        <span class="cd-currency">$</span><span class="cd-value">35</span><span class="cd-duration">mo</span>
+                    </span>
+
+                    <ul>
+                        <li><em>1024MB</em> Memory</li>
+                        <li><em>5</em> User</li>
+                        <li><em>10</em> Website</li>
+                        <li><em>10</em> Domain</li>
+                        <li><em>Unlimited</em> Bandwidth</li>
+                        <li><em>24/7</em> Support</li>
+                    </ul>
+
+                    <a class="btn-ql" href="#">Select</a>
+                    <span class="lines"></span>
+                </div>
+            <?php
             }
             ?>
             

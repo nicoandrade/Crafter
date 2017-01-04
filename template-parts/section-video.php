@@ -15,7 +15,7 @@ if ( $crafter_enable_section || is_customize_preview() ) :
         
     </div><div class="video-text-wrap wow fadeInRight" data-wow-delay="300ms">
     	<?php /* translators: Lorem ipsum text, It is not strictly necessary to translate. */ ?>
-        <h3 class="video-text-title"><?php  echo esc_html( get_theme_mod( 'crafter_video_title', __( 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et', 'crafter' ) ) ); ?></h3>
+        <h3 class="video-text-title"><?php  echo esc_html( get_theme_mod( 'crafter_video_title' ) ); ?></h3>
         <?php
         $wp_kses_args = array(
 		    'a' => array(
@@ -28,7 +28,7 @@ if ( $crafter_enable_section || is_customize_preview() ) :
 		    'span' => array(),
 		);
 		/* translators: Lorem ipsum text, It is not strictly necessary to translate. */
-		$video_text = wp_kses( get_theme_mod( 'crafter_video_text', __( 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis.', 'crafter' ) ), $wp_kses_args );
+		$video_text = wp_kses( get_theme_mod( 'crafter_video_text' ), $wp_kses_args );
         ?>
         <p><?php echo $video_text; ?></p>
         <?php $crafter_video_link_title = get_theme_mod( 'crafter_video_link_title', esc_html__( 'Learn More', 'crafter' ) ); ?>

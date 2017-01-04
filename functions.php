@@ -90,6 +90,21 @@ function crafter_setup() {
 		'default-image' => '',
 	) );
 
+	/**
+	 * Set up the WordPress core custom header feature.
+	 *
+	 * @uses crafter_header_style()
+	 */
+	add_theme_support( 'custom-header', apply_filters( 'crafter_custom_header_args', array(
+		'default-image'          => '',
+		'default-text-color'     => '383838',
+		'width'                  => 1905,
+		'height'                 => 42,
+		'flex-height'            => true,
+		'flex-width'            => true,
+		'wp-head-callback'       => 'crafter_header_style',
+	) ) );
+
 
 	// Styles for TinyMCE
 	$font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Ubuntu:300,400,700' );
@@ -136,9 +151,7 @@ add_action( 'widgets_init', 'crafter_widgets_init' );
  */
 function crafter_widgets_register() {
 
-	require get_template_directory() . '/inc/widgets/service.php';
 	require get_template_directory() . '/inc/widgets/client.php';
-	require get_template_directory() . '/inc/widgets/pricing.php';
 
 }
 add_action( 'widgets_init', 'crafter_widgets_register' );
@@ -182,19 +195,6 @@ function crafter_wp_admin_style() {
         wp_enqueue_style( 'crafter_custom_wp_admin_css' );
 }
 add_action( 'admin_enqueue_scripts', 'crafter_wp_admin_style' );
-
-
-
-/**
- * Load theme updater functions.
- * Action is used so that child themes can easily disable.
- */
-function crafter_theme_updater() {
-	global $updater;
-	require( get_template_directory() . '/inc/updater/theme-updater.php' );
-
-}
-add_action( 'after_setup_theme', 'crafter_theme_updater' );
 
 
 
@@ -252,13 +252,3 @@ require get_template_directory() . '/inc/jetpack.php';
 	// Theme Info Page
 	require get_template_directory() . '/inc/theme-functions/theme-info-page.php';
 
-
-
-/**
- * Redirect after theme installation
- *
- */
-function crafter_theme_redirect () {
-	wp_redirect( admin_url( 'themes.php?page=crafter_theme-info' ) );
-}
-add_action( 'after_switch_theme', 'crafter_theme_redirect' );

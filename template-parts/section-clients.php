@@ -23,31 +23,31 @@ if ( empty( $clients_image ) ) {
                 'title' => 'WordPress',
                 'image_uri' => get_template_directory_uri() . '/images/logo1.png', 
                 );
-            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget %s clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
+            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
 
             $widget_instance = array(
                 'title' => 'WooCommerce',
                 'image_uri' => get_template_directory_uri() . '/images/logo2.png', 
                 );
-            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget %s clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
+            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
 
             $widget_instance = array(
                 'title' => 'Dribbble',
                 'image_uri' => get_template_directory_uri() . '/images/logo3.png', 
                 );
-            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget %s clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
+            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
 
             $widget_instance = array(
                 'title' => 'WPML',
                 'image_uri' => get_template_directory_uri() . '/images/logo4.png', 
                 );
-            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget %s clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
+            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
 
             $widget_instance = array(
                 'title' => 'jQuery',
                 'image_uri' => get_template_directory_uri() . '/images/logo5.png', 
                 );
-            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget %s clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
+            the_widget( 'crafter_Client', $widget_instance, array( 'before_widget' => '<div class="widget clients-logo wow flipInX">', 'after_widget' => '</div>' ) );
 
         }
         ?>

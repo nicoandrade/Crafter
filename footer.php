@@ -10,7 +10,7 @@
  */
 
 ?>
-<?php if ( !is_front_page() ) : ?>
+<?php if ( get_option( 'show_on_front' ) == 'posts' || !is_front_page() ) : ?>
         <div class="clearfix"></div>
     </div><!-- /row -->
             
@@ -23,7 +23,8 @@
 
                 <div class="col-md-5">
                     <p>
-                    <?php esc_html_e( '&copy;', 'crafter' ); echo ' ' . date('Y') . ' ' . get_bloginfo( 'name' );  ?>. <?php esc_html_e( 'Designed by ', 'crafter' ); ?><a href="https://www.quemalabs.com/"><?php esc_html_e( 'Quema Labs', 'crafter' ); ?></a>.
+                    <?php esc_html_e( '&copy;', 'crafter' ); echo ' ' . date_i18n( 'Y' ) . ' ' . get_bloginfo( 'name' );  ?>.
+                    <?php printf( esc_html__( 'Designed by %s.', 'crafter' ), '<a href="https://www.quemalabs.com/" rel="designer">Quema Labs</a>' ); ?>
                     </p>
                 </div>
                 <div class="col-md-7">

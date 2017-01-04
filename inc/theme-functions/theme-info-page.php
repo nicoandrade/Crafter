@@ -37,7 +37,7 @@ function quemalabs_getting_started_page() {
 					?>
 					<li><a href="?page=crafter_theme-info&amp;tab=docs" class="<?php echo ( $tab == 'docs' ) ? ' active' : ''; ?>"><i class="fa fa-file-text-o"></i> <?php esc_html_e( 'Documentation', 'crafter' ); ?></a></li>
 					<li><a href="https://www.quemalabs.com/theme/crafter-pro/" target="_blank"><i class="fa fa-star-o"></i> <?php esc_html_e( 'PRO Version', 'crafter' ); ?></a></li>
-					<li><a href="?page=crafter_theme-info&amp;tab=more-themes" class="<?php echo ( $tab == 'more-themes' ) ? ' active' : ''; ?>"><i class="fa fa-wordpress"></i> <?php esc_html_e( 'More Themes', 'crafter' ); ?></a></li>
+					<li><a href="https://www.quemalabs.com/" target="_blank" class="<?php echo ( $tab == 'more-themes' ) ? ' active' : ''; ?>"><i class="fa fa-wordpress"></i> <?php esc_html_e( 'More Themes', 'crafter' ); ?></a></li>
 				</ul>
 
 			</div><!-- .theme-content -->
@@ -64,87 +64,13 @@ function quemalabs_getting_started_page() {
 
 			<div class="theme-docuementation">
 				<div class="help-msg-wrap">
-					<div class="help-msg"><?php echo sprintf( esc_html__( 'You can find this documentation and more at our %sHelp Center%s.', 'crafter' ), '<a href="https://www.quemalabs.com/help-center/" target="_blank">', '</a>' ); ?></div>
+					<div class="help-msg"><?php echo sprintf( esc_html__( 'You can find the documentation and more at our %sHelp Center%s.', 'crafter' ), '<a href="https://www.quemalabs.com/help-center/" target="_blank">', '</a>' ); ?></div>
 				</div>
-				<?php
-				$url = wp_nonce_url( 'themes.php?page=crafter_theme-info', 'more-themes' );
-				if ( false === ( $creds = request_filesystem_credentials( $url, '', false, false, null ) ) ) {
-					return; // stop processing here
-				}
-				if ( ! WP_Filesystem( $creds ) ) {
-					request_filesystem_credentials( $url, '', true, false, null );
-					return;
-				}
-				global $wp_filesystem;
-				$content = $wp_filesystem->get_contents( 'https://www.quemalabs.com/article/' . QL_THEME_SLUG . '-documentation/' );
-				if ( $content ) {
-					
-					$first_step = explode( '<div class="post_content">' , $content );
-					$second_step = explode("</div><!-- /post_content -->" , $first_step[1] );
-
-					echo $second_step[0];
-
-				}
-				?>
+				
 			</div><!-- .theme-docuementation -->
 			<?php
 	      	break;
-	      	case 'license' :
-
-	      	
-			$updater->license_page();
-	      	
-	        ?>
-
-        <?php
-        	break;
-        	case 'more-themes' :
-
-        	$url = wp_nonce_url( 'themes.php?page=crafter_theme-info', 'more-themes' );
-			if ( false === ( $creds = request_filesystem_credentials( $url, '', false, false, null ) ) ) {
-				return; // stop processing here
-			}
-			if ( ! WP_Filesystem( $creds ) ) {
-				request_filesystem_credentials( $url, '', true, false, null );
-				return;
-			}
-			global $wp_filesystem;
-			$json = $wp_filesystem->get_contents( 'https://www.quemalabs.com/wp-json/quemalabs/v1/themes/' );
-			$themes = json_decode( $json );
-
-        	echo '<div class="more-themes">';
-
-				foreach ( $themes as $theme ) {
-					if ( QL_THEME_SLUG == $theme->slug ) continue;
-						
-					?>
-					<div class="ql-theme">
-						<a href="<?php echo esc_url( $theme->url ); ?>" class="ql-theme-image" target="_blank"><img src="<?php echo $theme->image; ?>" alt="<?php echo esc_attr( $theme->slug ); ?>" /></a>
-						<div class="ql-theme-info">
-							<h4><a href="<?php echo esc_url( $theme->url ); ?>" target="_blank"><?php echo esc_html( $theme->name ); ?></a></h4>
-							<p><?php if ( property_exists( $theme, 'sub_title' ) ) { echo esc_html( $theme->sub_title ); } ?></p>
-							<?php
-							if ( property_exists( $theme, 'type' ) ) {
-								if( 'premium' == $theme->type ){
-									$type = esc_html__( 'Premium', 'crafter' );
-								}else{
-									$type = esc_html__( 'Free', 'crafter' );
-								}
-							?>
-							<a href="<?php echo esc_url( $theme->url ); ?>" class="ql-theme-button <?php echo esc_attr( $theme->type ); ?>" target="_blank"><?php echo $type; ?></a>
-							<?php } ?>
-						</div>
-					</div>
-					<?php
-				}
-
-        ?>
-
-				
-        	</div><!-- .more-themes -->
-
-        <?php
-        	break;
+	      
      	}//switch
          ?>
 

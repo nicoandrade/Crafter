@@ -1,6 +1,6 @@
 === Crafter ===
 
-Crafter is a great bussiness and corporate theme. Works on all devecies from computer to mobile with its responsive design. Optimized for SEO, easy to customize and translation ready. 
+Crafter is a great business and corporate theme. Works on all devices from computer to mobile with its responsive design. Optimized for SEO, easy to customize and translation ready.
 If you need more features you should check the PRO version, Crafter Pro: https://www.quemalabs.com/theme/crafter-pro/
 
 Author: Quema Labs
@@ -66,9 +66,9 @@ Font Awesome licensed under SIL OFL 1.1 http://scripts.sil.org/OFL
 Font Awesome CSS, LESS, and Sass files are licensed under the MIT License https://opensource.org/licenses/mit-license.html
 Source: http://fontawesome.io
 
-Streamline Free iOS Icons Pack
-http://www.streamlineicons.com/license.html
-Source: http://www.streamlineicons.com/free-icons.html
+100 Free Line-Style Icons
+License: GPL2
+Source: https://www.elegantthemes.com/blog/freebie-of-the-week/free-line-style-icons
 
 Bootstrap Created by @mdo and @fat.
 Code licensed under MIT

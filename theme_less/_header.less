@@ -5,7 +5,7 @@
 	padding: 1.5625rem 0;
 	width: 100%;
 }
-.home #header{
+.home:not(.blog) #header{
 	margin-bottom: 0;
 	position: absolute;
 	.translate(-50%; 0);
@@ -50,7 +50,7 @@
 	.transition( all 400ms ease-in-out);
 	text-transform: uppercase;
 }
-.home .logo_container .ql_logo{
+.home:not(.blog) .logo_container .ql_logo{
 	color: #fff;
 }
 
@@ -132,7 +132,7 @@ Nav Menu
     padding: 0.78571428571429em 1.07142857142857em;
     outline: 0;
 }
-.home #jqueryslidemenu ul.nav > li > a{
+.home:not(.blog) #jqueryslidemenu ul.nav > li > a{
     color: @gray-lighter;
 }
 #jqueryslidemenu ul.nav > li > a:hover, #jqueryslidemenu ul.nav > li > a:focus{

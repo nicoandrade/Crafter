@@ -24,20 +24,6 @@ if ( $crafter_enable_section || is_customize_preview() ) :
 
             }//while
 
-        }else{// if have posts
-
-            for ( $k = 0 ; $k < 3; $k++ ){
-                echo '<div class="testimonial"><blockquote cite="John">';
-                echo esc_html__( '"We are an agency passionate about what we do, providing a great service to small businesses. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."', 'crafter' );
-                echo '</blockquote>';
-                $wp_kses_args = array(
-                    'span' => array(),
-                );
-                $testimonial_cite = wp_kses( __( 'John Smith <span>CEO, Crafter Inc.</span>', 'crafter' ), $wp_kses_args );
-                echo '<p class="testimonial-cite">' . $testimonial_cite . '</p>';
-                echo '</div>';
-            }
-
         }
         wp_reset_postdata();
         ?>
