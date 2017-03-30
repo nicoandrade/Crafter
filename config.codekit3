@@ -7,7 +7,7 @@
 		"uuidString": "66C5A23F-5043-45DE-9387-F78871E3FD00"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25704",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -89,10 +89,12 @@
 	"\/css\/default-skin\/default-skin.png": {
 		"ft": 32768,
 		"iS": 547,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/css\/default-skin\/default-skin.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/css\/default-skin\/default-skin.svg": {
 		"ft": 2097152,
@@ -182,7 +184,8 @@
 		"oA": 0,
 		"oAP": "\/images\/aboutus.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/bullet-points.jpeg": {
 		"ft": 16384,
@@ -190,7 +193,8 @@
 		"oA": 0,
 		"oAP": "\/images\/bullet-points.jpeg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/clients.jpg": {
 		"ft": 16384,
@@ -198,103 +202,128 @@
 		"oA": 0,
 		"oAP": "\/images\/clients.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/header_bck.png": {
 		"ft": 32768,
 		"iS": 268434,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/header_bck.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/layers_64px.png": {
 		"ft": 32768,
 		"iS": 1791,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/layers_64px.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/linegraph_64px.png": {
 		"ft": 32768,
 		"iS": 1508,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/linegraph_64px.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo1.png": {
 		"ft": 32768,
 		"iS": 2564,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo1.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo2.png": {
 		"ft": 32768,
 		"iS": 2769,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo2.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo3.png": {
 		"ft": 32768,
 		"iS": 3465,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo3.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo4.png": {
 		"ft": 32768,
 		"iS": 3122,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo4.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo5.png": {
 		"ft": 32768,
 		"iS": 4121,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo5.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo6.png": {
 		"ft": 32768,
 		"iS": 3326,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo6.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo7.png": {
 		"ft": 32768,
 		"iS": 3873,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo7.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/megaphone_64px.png": {
 		"ft": 32768,
 		"iS": 1586,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/megaphone_64px.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/quemalabs.png": {
 		"ft": 32768,
 		"iS": 12774,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/quemalabs.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/slider1.jpg": {
 		"ft": 16384,
@@ -302,15 +331,18 @@
 		"oA": 0,
 		"oAP": "\/images\/slider1.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/tools_64px.png": {
 		"ft": 32768,
 		"iS": 2159,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/tools_64px.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/inc\/customizer.php": {
 		"ft": 8192,
@@ -2071,10 +2103,12 @@
 	"\/screenshot.png": {
 		"ft": 32768,
 		"iS": 488934,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/search.php": {
 		"ft": 8192,
@@ -3186,6 +3220,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -3204,6 +3242,10 @@
 			},
 		"no-class-assign": {
 			"active": 1,
+			"optionString": ""
+			},
+		"no-compare-neg-zero": {
+			"active": 0,
 			"optionString": ""
 			},
 		"no-cond-assign": {
@@ -3403,6 +3445,10 @@
 			"optionString": "{'grouping': false, 'allowCall': false }"
 			},
 		"no-mixed-spaces-and-tabs": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-multi-assign": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3682,6 +3728,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
+			},
 		"object-curly-newline": {
 			"active": 0,
 			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
@@ -3726,9 +3776,17 @@
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
 			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
+			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -3823,6 +3881,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
@@ -4269,7 +4331,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 1,
@@ -4362,7 +4425,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
