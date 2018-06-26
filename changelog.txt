@@ -1,3 +1,9 @@
+* 1.0.12 - 26/06/2018
+====================
+- Improved: Layout on smaller screens
+- Improved: Custom header code
+
+
 * 1.0.11 - 30/03/2017
 ====================
 - Fixed: Menu bug on mobile
