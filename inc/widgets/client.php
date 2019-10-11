@@ -73,7 +73,7 @@ class crafter_Client extends WP_Widget{
 
         $instance['title'] = wp_strip_all_tags( $new_instance['title'] );
 
-        $instance['image_uri'] = wp_strip_all_tags( $new_instance['image_uri'] );
+        $instance['image_uri'] = esc_url( $new_instance['image_uri'] );
 
         return $instance;
 
